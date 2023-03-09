@@ -16,21 +16,23 @@
   <meta name="author" content="yangyukeke">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、全局 API(一)、createApp()创建一个应用实例。 内联根组件 1234import &amp;#123; createApp &amp;#125; from &quot;vue&quot;;const app &#x3D; createApp(&amp;#123;  &#x2F;&#x2F;.....&amp;#125;);  使用从别处导入的组件 123import &amp;#123; createApp &amp;#125; from &quot;vu">
+    <meta name="description" content="方式   序号 方法    1 history.go()   2 location.reload()   3 location &#x3D; location   4 location.assign(location.href)   5 location.replace(location.href)   6 location.replace(document.referrer)   7 windo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue-study">
-<meta property="og:url" content="http://example.com/vue-study/index.html">
+<meta property="og:title" content="javascript | 刷新页面的方式">
+<meta property="og:url" content="http://example.com/javascipt-reload-page/index.html">
 <meta property="og:site_name" content="yangyukeke">
-<meta property="og:description" content="一、全局 API(一)、createApp()创建一个应用实例。 内联根组件 1234import &amp;#123; createApp &amp;#125; from &quot;vue&quot;;const app &#x3D; createApp(&amp;#123;  &#x2F;&#x2F;.....&amp;#125;);  使用从别处导入的组件 123import &amp;#123; createApp &amp;#125; from &quot;vu">
+<meta property="og:description" content="方式   序号 方法    1 history.go()   2 location.reload()   3 location &#x3D; location   4 location.assign(location.href)   5 location.replace(location.href)   6 location.replace(document.referrer)   7 windo">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-30T05:27:09.000Z">
-<meta property="article:modified_time" content="2023-02-01T01:21:02.931Z">
+<meta property="og:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9171c0f0bb7c4a0b85daa800bea7b98b~tplv-k3u1fbpfcp-watermark.image">
+<meta property="article:published_time" content="2023-03-09T12:58:08.000Z">
+<meta property="article:modified_time" content="2023-03-09T12:58:51.481Z">
 <meta property="article:author" content="yangyukeke">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9171c0f0bb7c4a0b85daa800bea7b98b~tplv-k3u1fbpfcp-watermark.image">
   
   
   
-  <title>vue-study - yangyukeke</title>
+  <title>javascript | 刷新页面的方式 - yangyukeke</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="vue-study"></span>
+            <span id="subtitle" data-typed-text="javascript | 刷新页面的方式"></span>
           
         </div>
 
@@ -207,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-30 13:27" pubdate>
-          2023年1月30日 下午
+        <time datetime="2023-03-09 20:58" pubdate>
+          2023年3月9日 晚上
         </time>
       </span>
     
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          662 字
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          15 分钟
+          6 分钟
         
       </span>
     
@@ -268,55 +270,75 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">vue-study</h1>
+            <h1 style="display: none">javascript | 刷新页面的方式</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、全局-API"><a href="#一、全局-API" class="headerlink" title="一、全局 API"></a>一、全局 API</h1><h2 id="一-、createApp"><a href="#一-、createApp" class="headerlink" title="(一)、createApp()"></a>(一)、createApp()</h2><p>创建一个应用实例。</p>
-<p>内联根组件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; createApp &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">createApp</span>(&#123;<br>  <span class="hljs-comment">//.....</span><br>&#125;);<br></code></pre></td></tr></table></figure>
-
-<p>使用从别处导入的组件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; createApp &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App.vue&quot;</span>;<br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">createApp</span>(<span class="hljs-title class_">App</span>);<br></code></pre></td></tr></table></figure>
-
-<h2 id="二-、app-mount"><a href="#二-、app-mount" class="headerlink" title="(二)、app.mount()"></a>(二)、app.mount()</h2><p>将应用实例挂载在一个容器元素中。</p>
-<p>参数可以是一个实际的 DOM 元素或者一个 CSS 选择器</p>
-<p>CSS 选择器为参数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; createApp &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">createApp</span>(<span class="hljs-comment">/* ... */</span>);<br>app.<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;#app&quot;</span>);<br></code></pre></td></tr></table></figure>
-
-<p>DOM 元素为参数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">app.<span class="hljs-title function_">mount</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-property">firstChild</span>);<br></code></pre></td></tr></table></figure>
-
-<h2 id="三-、app-unmount"><a href="#三-、app-unmount" class="headerlink" title="(三)、app.unmount()"></a>(三)、app.unmount()</h2><p>卸载一个已挂载的应用实例。</p>
-<h2 id="四-、app-provide"><a href="#四-、app-provide" class="headerlink" title="(四)、app.provide()"></a>(四)、app.provide()</h2><p>提供一个值，可以给后代的所有组件使用</p>
-<p>参数 1：注入的 key<br>参数 2：提供的值</p>
-<p>示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; createApp &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">createApp</span>(<span class="hljs-comment">/*...*/</span>);<br>app.<span class="hljs-title function_">provide</span>(<span class="hljs-string">&quot;message&quot;</span>, <span class="hljs-string">&quot;hello&quot;</span>);<br></code></pre></td></tr></table></figure>
-
-<p>后代组件使用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; inject &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  <span class="hljs-title function_">setup</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">inject</span>(<span class="hljs-string">&quot;message&quot;</span>)); <span class="hljs-comment">// &#x27;hello&#x27;</span><br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<h2 id="五-、app-directive-自定义指令"><a href="#五-、app-directive-自定义指令" class="headerlink" title="(五)、app.directive 自定义指令"></a>(五)、app.directive 自定义指令</h2><p>参考文档：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52203618/article/details/127867548">https://blog.csdn.net/weixin_52203618/article/details/127867548</a></p>
-<h2 id="六-、app-use-安装一个插件"><a href="#六-、app-use-安装一个插件" class="headerlink" title="(六)、app.use() 安装一个插件"></a>(六)、app.use() 安装一个插件</h2><ul>
-<li>参数 1：插件本身</li>
-<li>参数 2：传递给插件的选项</li>
-</ul>
-<h2 id="七-、app-mixin-混合"><a href="#七-、app-mixin-混合" class="headerlink" title="(七)、app.mixin()混合"></a>(七)、app.mixin()混合</h2><p>应用一个全局 mixin。一个全局的 mixin 会作用于应用中的每个组件实例。</p>
-<h2 id="（八）、app-version"><a href="#（八）、app-version" class="headerlink" title="（八）、app.version"></a>（八）、app.version</h2><p>当前应用所使用的 vue 版本号。</p>
-<h2 id="（九）、app-config-globalProperties"><a href="#（九）、app-config-globalProperties" class="headerlink" title="（九）、app.config.globalProperties"></a>（九）、app.config.globalProperties</h2><p>一个用于注册能够被应用内所有组件实例访问到的全局属性的对象。<br>用法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">app.<span class="hljs-property">config</span>.<span class="hljs-property">globalProperties</span>.<span class="hljs-property">msg</span> = <span class="hljs-string">&quot;hello&quot;</span>;<br></code></pre></td></tr></table></figure>
-
-<p>这使得 msg 在应用的任意组件模板上都可以使用，并且也可以通过任意组件实例的 this 访问到</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  <span class="hljs-title function_">mounted</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">msg</span>); <span class="hljs-comment">// &#x27;hello&#x27;</span><br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<h1 id="二、通用-API"><a href="#二、通用-API" class="headerlink" title="二、通用 API"></a>二、通用 API</h1><h2 id="一-、version"><a href="#一-、version" class="headerlink" title="(一)、version"></a>(一)、version</h2><p>暴露当前所使用的 Vue 版本。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; version &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(version);<br></code></pre></td></tr></table></figure>
-
-<h2 id="二-、nextTick"><a href="#二-、nextTick" class="headerlink" title="(二)、nextTick()"></a>(二)、nextTick()</h2><p>等待下一次 DOM 更新刷新的工具方法。</p>
-<p>当你在 Vue 中更改响应式状态时，最周的 DOM 更新并不是同步生效的，而是由 Vue 将他们缓存在一个队列中，直到下一个”tick”才一起执行。这样是为了确保每个组件无论发生多少次状态改变，都仅执行一次更新。</p>
-<p><code>nextTick()</code>可以在状态改变后立即使用，以等待 DOM 更新完成。你可以传递一个回调函数作为参数，或者<code>await</code>返回的<code>Promise</code>。</p>
-<h1 id="三、组合式-API"><a href="#三、组合式-API" class="headerlink" title="三、组合式 API"></a>三、组合式 API</h1><h2 id="一-、readonly"><a href="#一-、readonly" class="headerlink" title="(一)、readonly()"></a>(一)、readonly()</h2><p>说明：接受一个<code>对象</code>（不管是响应式的还是普通的）或者是一个 ref，返回的是一个只读的原值。<br>细节：它是深层的。即不管原值是多少个子节点，孙节点，都是只读。<br>用途：保护某些数据不让它有意外的被修改。</p>
+                <h2 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>history.go()</td>
+</tr>
+<tr>
+<td>2</td>
+<td>location.reload()</td>
+</tr>
+<tr>
+<td>3</td>
+<td>location &#x3D; location</td>
+</tr>
+<tr>
+<td>4</td>
+<td>location.assign(location.href)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>location.replace(location.href)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>location.replace(document.referrer)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>window.location.href &#x3D; document.URL</td>
+</tr>
+<tr>
+<td>8</td>
+<td>window.location.href &#x3D; document.location.href</td>
+</tr>
+<tr>
+<td>9</td>
+<td>window.open(document.referrer, “_parent”, “”)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>document.location.href &#x3D; window.location.href</td>
+</tr>
+<tr>
+<td>11</td>
+<td>document.location.href &#x3D; document.URL</td>
+</tr>
+<tr>
+<td>12</td>
+<td>document.execCommand(“Refresh”) （已废弃）</td>
+</tr>
+<tr>
+<td>13</td>
+<td>window.navigate(url)（只针对 IE 浏览器，避免使用，不兼容）</td>
+</tr>
+</tbody></table>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p>1、<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand</a></p>
+<p>2、<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46652188/article/details/119867048">https://blog.csdn.net/m0_46652188/article/details/119867048</a></p>
+<p>3、<a target="_blank" rel="noopener" href="https://blog.csdn.net/hu1010037197/article/details/100427393">https://blog.csdn.net/hu1010037197/article/details/100427393</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9171c0f0bb7c4a0b85daa800bea7b98b~tplv-k3u1fbpfcp-watermark.image" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 
                 
               </div>
@@ -334,8 +356,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>vue-study</div>
-      <div>http://example.com/vue-study/</div>
+      <div>javascript | 刷新页面的方式</div>
+      <div>http://example.com/javascipt-reload-page/</div>
     </div>
     <div class="license-meta">
       
@@ -347,7 +369,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月30日</div>
+          <div>2023年3月9日</div>
         </div>
       
       
@@ -379,18 +401,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/vue3-slots/" title="vue3 | slots">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vue3 | slots</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/hexo-start/" title="hexo | 搭建个人网站">
-                        <span class="hidden-mobile">hexo | 搭建个人网站</span>
+                      <a href="/vue3-readonly%E3%80%81shallowReadonly/" title="vue3-readonly、shallowReadonly">
+                        <span class="hidden-mobile">vue3-readonly、shallowReadonly</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

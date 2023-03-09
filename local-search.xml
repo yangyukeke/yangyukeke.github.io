@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>javascript | 刷新页面的方式</title>
+    <link href="/javascipt-reload-page/"/>
+    <url>/javascipt-reload-page/</url>
+    
+    <content type="html"><![CDATA[<h2 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h2><table><thead><tr><th>序号</th><th>方法</th></tr></thead><tbody><tr><td>1</td><td>history.go()</td></tr><tr><td>2</td><td>location.reload()</td></tr><tr><td>3</td><td>location &#x3D; location</td></tr><tr><td>4</td><td>location.assign(location.href)</td></tr><tr><td>5</td><td>location.replace(location.href)</td></tr><tr><td>6</td><td>location.replace(document.referrer)</td></tr><tr><td>7</td><td>window.location.href &#x3D; document.URL</td></tr><tr><td>8</td><td>window.location.href &#x3D; document.location.href</td></tr><tr><td>9</td><td>window.open(document.referrer, “_parent”, “”)</td></tr><tr><td>10</td><td>document.location.href &#x3D; window.location.href</td></tr><tr><td>11</td><td>document.location.href &#x3D; document.URL</td></tr><tr><td>12</td><td>document.execCommand(“Refresh”) （已废弃）</td></tr><tr><td>13</td><td>window.navigate(url)（只针对 IE 浏览器，避免使用，不兼容）</td></tr></tbody></table><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p>1、<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand</a></p><p>2、<a href="https://blog.csdn.net/m0_46652188/article/details/119867048">https://blog.csdn.net/m0_46652188/article/details/119867048</a></p><p>3、<a href="https://blog.csdn.net/hu1010037197/article/details/100427393">https://blog.csdn.net/hu1010037197/article/details/100427393</a></p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9171c0f0bb7c4a0b85daa800bea7b98b~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vue3-readonly、shallowReadonly</title>
     <link href="/vue3-readonly%E3%80%81shallowReadonly/"/>
     <url>/vue3-readonly%E3%80%81shallowReadonly/</url>
