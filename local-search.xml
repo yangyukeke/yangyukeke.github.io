@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>支付宝小程序 | 获取网络状态</title>
+    <link href="/alipay-mini-program-getnetwork/"/>
+    <url>/alipay-mini-program-getnetwork/</url>
+    
+    <content type="html"><![CDATA[<p>参考文档：</p><ul><li><a href="https://opendocs.alipay.com/open/025653">https://opendocs.alipay.com/open/025653</a></li><li><a href="https://opendocs.alipay.com/mini/api/network-status">https://opendocs.alipay.com/mini/api/network-status</a></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 获取网络状态</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> <span class="hljs-variable">networkAvailable</span></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> <span class="hljs-variable">networkType</span></span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">getNetworkType</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> &#123; networkAvailable, networkType &#125; = <span class="hljs-keyword">await</span> my.<span class="hljs-title function_">getNetworkType</span>();<br>  <span class="hljs-keyword">return</span> &#123;<br>    networkAvailable,<br>    networkType,<br>  &#125;;<br>&#125;;<br></code></pre></td></tr></table></figure><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ebe2ba32a3c449019f9442d0a194942a~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">async</span> <span class="hljs-title function_">onPullDownRefresh</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">//使用封装的方法</span><br>  <span class="hljs-keyword">const</span> &#123; networkAvailable &#125; = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getNetworkType</span>()<br>  <span class="hljs-comment">//或者直接使用api</span><br>  <span class="hljs-comment">//const &#123; networkAvailable, networkType &#125; = await my.getNetworkType()</span><br>  <span class="hljs-keyword">if</span> (networkAvailable) &#123;<br>    <span class="hljs-comment">//TODO网络可用</span><br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    my.<span class="hljs-title function_">showToast</span>(&#123;<br>      <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;当前网络不可用，请检查网络&#x27;</span>,<br>    &#125;)<br>  &#125;<br>&#125;,<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>支付宝小程序</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>前端</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>支付宝小程序 | 下拉刷新、自动刷新、上拉加载</title>
     <link href="/alipay-mini-program-refresh%E3%80%81load/"/>
     <url>/alipay-mini-program-refresh%E3%80%81load/</url>
