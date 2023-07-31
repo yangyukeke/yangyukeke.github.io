@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>【css面试篇】| 清除浮动</title>
+    <link href="/css-%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/"/>
+    <url>/css-%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="（一）为什么需要清除浮动"><a href="#（一）为什么需要清除浮动" class="headerlink" title="（一）为什么需要清除浮动"></a>（一）为什么需要清除浮动</h2><p>我们浮动元素有一个标准的父元素，他们都有一个共同的特点，都是有高度的。但是，所有的父盒子都必须有高度吗？<br>理想中的状态，让子盒子撑开父亲，有多少孩子，父盒子就有多高。由于父级盒子在很多情况下，不方便给高度，但是子盒子浮动又不占位置，最后父级盒子高度为 0 时，就会影响下面的标准流盒子</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5773c54e8cab45caa08a281ad0e37655~tplv-k3u1fbpfcp-watermark.image" alt="image1.png"></p><p>由于浮动元素不再占有原文档流的位置，所以他会对后面的元素排版产生影响<br>，所以清除浮动的本质就是如此</p><p>总结：</p><ul><li>1、父级没有高度</li><li>2、子盒子浮动了</li><li>3、影响下面的布局，所以就应该清除浮动</li></ul><h2 id="（二）清除浮动的本质"><a href="#（二）清除浮动的本质" class="headerlink" title="（二）清除浮动的本质"></a>（二）清除浮动的本质</h2><ul><li>1、清除浮动的本质就是清除浮动元素造成的影响</li><li>2、如果父盒子本身有高度，则不需要清除浮动</li><li>3、清除浮动之后，父级就会根据浮动的子盒子自动检测高度。父级有了高度，就不会影响下面的标准流了。</li></ul><h2 id="（三）清除浮动的主要语法"><a href="#（三）清除浮动的主要语法" class="headerlink" title="（三）清除浮动的主要语法"></a>（三）清除浮动的主要语法</h2><pre><code class="hljs">选择器&#123;clear:属性值&#125;</code></pre><table><thead><tr><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>left</td><td>不允许左侧有浮动元素 （清除左侧浮动的影响）</td></tr><tr><td>right</td><td>不允许右侧有浮动元素（清除右侧浮动的影响）</td></tr><tr><td>both</td><td>同时清除左右两侧的影响</td></tr></tbody></table><p>在我们实际开发工作中，几乎只用 clear:both;<br>清除浮动的策略是：闭合浮动</p><h2 id="（四）清除浮动的方法"><a href="#（四）清除浮动的方法" class="headerlink" title="（四）清除浮动的方法"></a>（四）清除浮动的方法</h2><h3 id="1、额外标签法"><a href="#1、额外标签法" class="headerlink" title="1、额外标签法"></a>1、额外标签法</h3><p>也称隔墙法，是 W3C 推荐的做法<br>额外标签法会在浮动元素的末尾添加一个空的标签。例如<code>&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;</code>，或者其他标签（如<code>&lt;br/&gt;等</code>）</p><p>例子：</p><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e3c6466d985c439b97ca55beeb175ec3~tplv-k3u1fbpfcp-watermark.image" alt="image2.png"><br>没有清除浮动之前：</p><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e1534e5b102c446980b00cf7c2d194ee~tplv-k3u1fbpfcp-watermark.image" alt="image3.png"><br>清除浮动之后：</p><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92fa260165f44424b88b5257e2e1dcb9~tplv-k3u1fbpfcp-watermark.image" alt="image4.png"></p><ul><li>优点：通俗易懂，书写方便</li><li>缺点：添加许多无意义的标签，结构比较差</li></ul><p>注意：要求这个添加的新的空标签必须是块级元素</p><h3 id="2、父级添加-overflow"><a href="#2、父级添加-overflow" class="headerlink" title="2、父级添加 overflow"></a>2、父级添加 overflow</h3><p>可以给父级添加 overflow 属性，将其属性设置为 hidden,auto 或 scroll。子不教父之过，注意是给父元素添加代码</p><ul><li>优点：代码简洁</li><li>缺点：无法显示溢出的部分，溢出隐藏</li></ul><h3 id="3、-after-伪元素法"><a href="#3、-after-伪元素法" class="headerlink" title="3、:after 伪元素法"></a>3、:after 伪元素法</h3><p>:after 方式是额外标签法的升级版。也是给父元素添加</p><pre><code class="hljs">.clearfix:after&#123;    content:&#39;&#39;;    display:block;    height:0;    clear:both;    visibility:hidden;&#125;</code></pre><!----><pre><code class="hljs">.clearfix&#123;    zoom:1&#125;</code></pre><ul><li>优点：没有增加标签，结构更简单，结构语义化正确</li><li>缺点：照顾低版本浏览器，IE6-7 不支持，有兼容性问题<br>代表网站：百度，淘宝网，网易等</li></ul><h3 id="4、双伪元素清除浮动"><a href="#4、双伪元素清除浮动" class="headerlink" title="4、双伪元素清除浮动"></a>4、双伪元素清除浮动</h3><p>也是给父元素添加</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:before</span>,<span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:after</span>&#123;<br>    <span class="hljs-attribute">content</span>:<span class="hljs-string">&#x27;&#x27;</span>;<br>    <span class="hljs-attribute">display</span>:table;<br>&#125;<br><span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:after</span>&#123;<br>    <span class="hljs-attribute">clear</span>:both;<br>&#125;<br><span class="hljs-selector-class">.clearfix</span>&#123;<br>    zoom:<span class="hljs-number">1</span><br>&#125;<br><br></code></pre></td></tr></table></figure><ul><li>优点：代码更简洁，结构语义化正确</li><li>缺点：照顾低版本浏览器，IE6-7 不支持，有兼容性问题</li></ul><p>详细文档：<a href="https://juejin.cn/post/7261641986997551159">https://juejin.cn/post/7261641986997551159</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>css</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>前端</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>支付宝小程序 | 上传图片组件(添加默认样式以及自定义上传样式)</title>
     <link href="/alipay-mini-program-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%BB%84%E4%BB%B6/"/>
     <url>/alipay-mini-program-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%BB%84%E4%BB%B6/</url>
