@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>javascript-变量、函数、属性的命名规则</title>
+    <link href="/javascript-%E5%8F%98%E9%87%8F%E3%80%81%E5%87%BD%E6%95%B0%E3%80%81%E5%B1%9E%E6%80%A7%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/"/>
+    <url>/javascript-%E5%8F%98%E9%87%8F%E3%80%81%E5%87%BD%E6%95%B0%E3%80%81%E5%B1%9E%E6%80%A7%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/</url>
+    
+    <content type="html"><![CDATA[<h1 id="javascript-标识符的命名规则"><a href="#javascript-标识符的命名规则" class="headerlink" title="javascript 标识符的命名规则"></a>javascript 标识符的命名规则</h1><p>变量、函数、属性的名字、或者函数的参数，都可称为标识符。标识符可以是按照下列格式规则组合起来的一个或者多个字符。</p><ul><li>第一个字符必须是一个<code>字母</code>、<code>下划线_</code>、或<code>美元符号$</code>。</li><li><code>数字</code>不可以作为标识符的首字符。</li><li>其他字符可以是<code>数字</code>、<code>字母</code>、<code>下划线_</code>、或<code>美元符号$</code></li></ul><h1 id="对象属性的命名规则"><a href="#对象属性的命名规则" class="headerlink" title="对象属性的命名规则"></a>对象属性的命名规则</h1><ul><li>通过<code>[]</code>操作符为对象添加属性时，属性名称可以是任何字符串（包括只包含空格的字符串和空字符串）</li></ul><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6dd6d24749db4eb68d0ac63e702515b0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=360&h=240&s=15480&e=png&b=ffffff" alt="image.png"></p><ul><li><p>通过.操作符为对象添加属性时，属性名称必须是合法的标识符名称；</p></li><li><p>属性名包含非法的标识符字符，则只能采用<code>obj[&quot;propertyName&quot;]</code>的形式；</p></li></ul><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e1c3c340f44448f7b5c9e08639d151af~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=373&h=149&s=10558&e=png&b=fffcfc" alt="image.png"></p><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6b880713be054b55a16f20749c76fdff~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=323&h=184&s=10927&e=png&b=fefcfc" alt="image.png"></p><ul><li>属性名是合法的标识符，读取时即可以采用 obj.propertyName,也可以采用<code>obj[&quot;propertyName&quot;]</code>的形式；</li></ul><h2 id="对象属性命名的特殊性"><a href="#对象属性命名的特殊性" class="headerlink" title="对象属性命名的特殊性"></a>对象属性命名的特殊性</h2><h3 id="纯数字属性名"><a href="#纯数字属性名" class="headerlink" title="纯数字属性名"></a>纯数字属性名</h3><p>如果对象属性名的纯数字（不合法命名）的情况下，可以采用<code>obj[number]</code>或者<code>obj[&#39;number&#39;]</code>进行属性值的设置或者读取。<code>obj.number</code>的方式会报错</p><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/873d5b2d9a134cdab8d70a25cb63e2a5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=331&h=228&s=12253&e=png&b=fffdfd" alt="image.png"></p><h3 id="布尔属性名"><a href="#布尔属性名" class="headerlink" title="布尔属性名"></a>布尔属性名</h3><p>布尔属性名可以采用<code>obj[true]</code>、<code>obj[&#39;true&#39;]</code>或者<code>obj.true</code>进行属性值的设置或者读取。</p><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3c7fe7eff71e40dbb0f0a570f06ef3e2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=328&h=229&s=10781&e=png&b=fefefe" alt="image.png"></p><p><a href="https://juejin.cn/post/7276022293000404992">友情链接</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>javascript</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>前端</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vue-study-b站尚硅谷</title>
+    <link href="/vue-study-1/"/>
+    <url>/vue-study-1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="认识-Vue"><a href="#认识-Vue" class="headerlink" title="认识 Vue"></a>认识 Vue</h1><h2 id="1、什么是-Vue"><a href="#1、什么是-Vue" class="headerlink" title="1、什么是 Vue"></a>1、什么是 Vue</h2><h2 id="2、Vue-的发展"><a href="#2、Vue-的发展" class="headerlink" title="2、Vue 的发展"></a>2、Vue 的发展</h2><h2 id="3、Vue-的特点"><a href="#3、Vue-的特点" class="headerlink" title="3、Vue 的特点"></a>3、Vue 的特点</h2><p>1、采用<code>组件化</code>模式、提高代码复用率、且让代码更好的维护。<br>2、<code>声明式</code>编程、让编码人员无需操作<code>DOM</code>、提高开发效率。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【javascript面试篇】| apply、bind、call的使用和区别</title>
     <link href="/javascript-apply%E3%80%81bind%E3%80%81call%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8C%BA%E5%88%AB/"/>
     <url>/javascript-apply%E3%80%81bind%E3%80%81call%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8C%BA%E5%88%AB/</url>
